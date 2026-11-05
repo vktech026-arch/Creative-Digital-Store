@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shop premium digital products, eBooks, Excel templates, planners, AI resources and creative downloads at Creative Digital Store.">
+  <title>Creative Digital Store | Premium Digital Products</title>
+  <style>
+    :root{--ink:#28231e;--muted:#766d63;--gold:#b58a45;--gold-dark:#8f6a2e;--cream:#f7f2e9;--paper:#fffdf9;--line:#e8ddcc}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1120px,92%);margin:auto}
+    header{background:rgba(255,253,249,.94);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+    .nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-family:Georgia,serif;font-size:22px;font-weight:bold;letter-spacing:.2px}
+    .brand span{color:var(--gold-dark)}
+    nav{display:flex;gap:24px;align-items:center;font-size:14px;color:var(--muted)}
+    .btn{display:inline-block;background:var(--gold);color:white;padding:12px 20px;border-radius:5px;font-weight:bold;font-size:14px;border:1px solid var(--gold);transition:.2s}
+    .btn:hover{background:var(--gold-dark);border-color:var(--gold-dark)}
+    .btn.outline{background:transparent;color:var(--gold-dark)}
+    .hero{padding:82px 0 76px;background:linear-gradient(120deg,#f8f1e5,#fffdf9 58%,#eee2cf)}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:42px;align-items:center}
+    .eyebrow{text-transform:uppercase;letter-spacing:2.5px;color:var(--gold-dark);font-size:11px;font-weight:bold}
+    h1{font:normal clamp(40px,6vw,66px)/1.08 Georgia,serif;margin:16px 0 18px;max-width:650px}
+    h1 em{color:var(--gold-dark);font-style:normal}
+    .hero p{color:var(--muted);max-width:540px;font-size:17px;margin:0 0 27px}
+    .hero-art{min-height:320px;border:1px solid #e2d2b8;border-radius:18px;background:linear-gradient(145deg,#e8d8bd,#c9a873);padding:22px;display:grid;place-items:center;box-shadow:0 20px 50px #60451b18}
+    .mockup{width:min(310px,100%);background:#fffdf9;border-radius:12px;padding:24px;box-shadow:0 15px 35px #4a321d33;transform:rotate(2deg)}
+    .mockup small{letter-spacing:2px;color:var(--gold-dark);font-size:9px}
+    .mockup h2{font:28px Georgia,serif;margin:12px 0}
+    .mockup .tiles{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:18px}
+    .tile{height:75px;border-radius:7px;background:#eee4d4;display:grid;place-items:center;color:#8c6b3b;font-size:12px;font-weight:bold}
+    section{padding:70px 0}
+    .section-head{text-align:center;max-width:650px;margin:0 auto 34px}
+    .section-head h2{font:normal 36px Georgia,serif;margin:8px 0}
+    .section-head p{color:var(--muted);margin:0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card{background:var(--paper);border:1px solid var(--line);border-radius:10px;overflow:hidden;transition:.2s}
+    .card:hover{transform:translateY(-4px);box-shadow:0 12px 30px #3b2a1710}
+    .card-art{height:155px;background:linear-gradient(135deg,#eadcc7,#d5bd98);display:grid;place-items:center;color:#72562f;font:24px Georgia,serif}
+    .card:nth-child(2) .card-art{background:linear-gradient(135deg,#e8e1d7,#c8b9a2)}
+    .card:nth-child(3) .card-art{background:linear-gradient(135deg,#e9d8bd,#c9a46d)}
+    .card:nth-child(4) .card-art{background:linear-gradient(135deg,#e4e4d9,#bfc0a8)}
+    .card:nth-child(5) .card-art{background:linear-gradient(135deg,#e9dfe0,#c7a9a6)}
+    .card:nth-child(6) .card-art{background:linear-gradient(135deg,#e6dfd0,#b9a47f)}
+    .card-body{padding:20px}
+    .card h3{font:21px Georgia,serif;margin:0 0 7px}
+    .card p{font-size:14px;color:var(--muted);margin:0 0 16px;min-height:44px}
+    .card .btn{padding:10px 14px}.price{font-size:20px;font-weight:bold;color:var(--gold-dark);margin:0 0 14px}
+    .benefits{background:#2d2923;color:#fffaf1}
+    .benefits .section-head p{color:#d3c8b8}
+    .benefit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center}
+    .benefit{padding:15px}
+    .benefit .symbol{font-size:27px;color:#d5b477}
+    .benefit h3{font:20px Georgia,serif;margin:8px 0}
+    .benefit p{font-size:14px;color:#d3c8b8;margin:0}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+    .about h2{font:normal 36px Georgia,serif;margin:8px 0 14px}
+    .about p{color:var(--muted)}
+    .about-panel{background:#eadcc7;border-radius:12px;padding:35px;text-align:center;font:26px Georgia,serif;color:#76592f}
+    .contact{background:#f0e6d7;text-align:center}
+    .contact h2{font:normal 36px Georgia,serif;margin:8px 0}
+    .contact p{color:var(--muted)}
+    footer{background:#24211d;color:#d8cdbd;padding:25px 0;font-size:13px}
+    footer .foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    @media(max-width:760px){nav{gap:12px;font-size:12px}.nav{min-height:64px}.brand{font-size:18px}.hero{padding:55px 0}.hero-grid,.about{grid-template-columns:1fr}.hero-art{min-height:260px}.cards{grid-template-columns:1fr 1fr}.benefit-grid{grid-template-columns:1fr}.section-head h2,.about h2,.contact h2{font-size:30px}}
+    @media(max-width:480px){nav a:not(.btn){display:none}.cards{grid-template-columns:1fr}.hero p{font-size:15px}.btn{padding:11px 15px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#"><span>Creative</span> Digital Store</a>
+    <nav>
+      <a href="#products">Products</a><a href="#about">About</a><a href="#contact">Contact</a>
+      <a class="btn" href="#products">Explore Store</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Your creative digital destination</div>
+        <h1>Smart resources for your <em>next big idea.</em></h1>
+        <p>Discover premium eBooks, Excel templates, digital planners, AI resources and creative downloads. Affordable digital solutions for creators, entrepreneurs, students and professionals worldwide.</p>
+        <a class="btn" href="#products">Explore Products</a>
+        <a class="btn outline" href="#about" style="margin-left:8px">Learn More</a>
+      </div>
+      <div class="hero-art" aria-label="Digital store preview">
+        <div class="mockup">
+          <small>CREATIVE DIGITAL STORE</small>
+          <h2>Make ideas happen.</h2>
+          <div class="tiles"><div class="tile">TEMPLATES</div><div class="tile">EBOOKS</div><div class="tile">DESIGN</div><div class="tile">TOOLS</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="products">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Browse the collection</div>
+        <h2>Digital products for every project</h2>
+        <p>Choose a collection to explore. Product names and store links can be customized as your catalog grows.</p>
+      </div>
+      <div class="cards">
+        <article class="card"><div class="card-art">YouTube + Blogging</div><div class="card-body"><h3>YouTube + Blogging Combo Pack</h3><p>Hindi digital PDF course with YouTube and blogging learning resources.</p><p class="price">$7.36</p><a class="btn" href="https://payhip.com/b/x93Tm" target="_blank" rel="noopener">Buy Now</a></div></article>
+        <article class="card"><div class="card-art">Parenting Planner</div><div class="card-body"><h3>Parenting Digital Planner</h3><p>30-page A4 printable planner for parents of children aged 5–15.</p><p class="price">$5.00</p><a class="btn" href="https://payhip.com/b/qJG8i" target="_blank" rel="noopener">Buy Now</a></div></article>
+        <article class="card"><div class="card-art">Excel Templates</div><div class="card-body"><h3>Excel & Business Templates</h3><p>Dashboards, budgets, trackers and productivity sheets.</p><span class="btn outline">Coming Soon</span></div></article>
+        <article class="card"><div class="card-art">Design Resources</div><div class="card-body"><h3>Design Resources</h3><p>Creative assets, graphics and resources for your content.</p><span class="btn outline">Coming Soon</span></div></article>
+        <article class="card"><div class="card-art">Social Media</div><div class="card-body"><h3>Social Media Templates</h3><p>Ready-to-edit designs for posts, stories and promotions.</p><span class="btn outline">Coming Soon</span></div></article>
+        <article class="card"><div class="card-art">AI Tools</div><div class="card-body"><h3>AI & Creator Resources</h3><p>Helpful prompts, workflows and resources for creators.</p><span class="btn outline">Coming Soon</span></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="benefits">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">A simple way to shop</div><h2>Digital shopping, made easy</h2><p>Clear product information and a convenient checkout experience.</p></div>
+      <div class="benefit-grid">
+        <div class="benefit"><div class="symbol">✦</div><h3>Instant Digital Access</h3><p>Access downloads after completing your purchase through the product checkout.</p></div>
+        <div class="benefit"><div class="symbol">◇</div><h3>Useful Resources</h3><p>Explore practical templates, guides and creative digital products.</p></div>
+        <div class="benefit"><div class="symbol">♡</div><h3>Friendly Support</h3><p>Questions about a product? Contact us by email for assistance.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about">
+      <div><div class="eyebrow">About our store</div><h2>Ideas, tools and creativity — all in one place.</h2><p>Creative Digital Store brings together downloadable resources for creators, professionals, students and small businesses. Browse the collections and find tools that make your work easier.</p><a class="btn" href="#products">Browse Products</a></div>
+      <div class="about-panel">Create more.<br>Work smarter.<br><span style="color:#a47a39">Keep growing.</span></div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap"><div class="eyebrow">We're here to help</div><h2>Have a question?</h2><p>For product questions, support or business inquiries, send us an email.</p><a class="btn" href="mailto:vktech026@gmail.com">Contact Us</a></div>
+  </section>
+</main>
+
+<footer><div class="wrap foot"><span>© <span id="year">2026</span> Creative Digital Store. All rights reserved.</span><span>Digital products • Templates • Ebooks • Creative resources</span></div></footer>
+</body>
+</html>
