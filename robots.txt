@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vktech026-arch.github.io/Creative-Digital-Store/sitemap.xml
